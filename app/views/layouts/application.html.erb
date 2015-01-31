@@ -2,18 +2,35 @@
 <html>
 	<head>
 	  <title>Crumblr</title>
+
 	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
 	  <%= csrf_meta_tags %>
+
 	</head>
 
 
 	<body>
-    <%= link_to "Home", "/" %>
-    <%= link_to "About", "/about" %>
-
-	<%= yield %>
-
+	    <div class="container">
+	    	<div class="header">
+				<nav>
+				    <ul class="nav nav-pills pull-right">
+					    <li><%= link_to "Home", "/" %></li>
+					    <li><%= link_to "About", "/about" %></li>
+				    </ul>
+				</nav>
+				<div class="page-header"> <h1><%= link_to "crumblr // ", "/"%><small>Home baked good</small></h1>
+			</div>
+		</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<%= yield %>
+				</div>
+			</div>	
+		</div>
 	</body>
 
 </html>

@@ -15,8 +15,3 @@ post1.save
 post2 = Post.new(title: "overnly", kind: "text")
 post2.content = "cool"
 post2.save
-
-post3 = Post.create [
-title: "title"
-]
-8.times { post3.hearts.create }
